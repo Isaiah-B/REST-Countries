@@ -5,7 +5,7 @@ const CountryCard = ({ name, population, region, capital, flag }) => {
   const formattedPopulation = Intl.NumberFormat('en-US').format(population);
 
   return (
-    <Link to={`/${name}`}>
+    <Link to={`/${name.split(' ').join('-')}`}>
       <div className="card el-shadow">
         <img className="card-flag" src={flag} alt={`Flag of ${name}`} />
         <div className="card-info">

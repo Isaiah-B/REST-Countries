@@ -53,7 +53,7 @@ const App = () => {
 
   const countryMatch = useMatch('/:name');
   const matchedCountry = countryMatch
-    ? countries.find((country) => country.name.common === countryMatch.params.name)
+    ? countries.find((country) => country.name.common.split(' ').join('-') === countryMatch.params.name)
     : null;
 
   useEffect(() => {
