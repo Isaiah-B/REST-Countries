@@ -2,7 +2,6 @@ import axios from 'axios';
 
 export const getAll = async () => {
   const res = await axios.get('https://restcountries.com/v3.1/all');
-  console.log(res.data);
   return res.data;
 };
 

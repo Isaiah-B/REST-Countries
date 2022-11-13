@@ -73,8 +73,8 @@ const CountryPage = ({ country }) => {
             <div className="border-tags">
               {borderCountries.map((border) => {
                 return (
-                  <Link to={`/${border.split(' ').join('-')}`}>
-                    <span key={border} className="border-tag el-shadow">{border}</span>
+                  <Link key={border} to={`/${border.split(' ').join('-')}`}>
+                    <span className="border-tag el-shadow">{border}</span>
                   </Link>
                 );
               })}
